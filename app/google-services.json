@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "862407422859",
+    "project_id": "beautypro-marketplace",
+    "storage_bucket": "beautypro-marketplace.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862407422859:android:92feddf883cc2176a4b58e",
+        "android_client_info": {
+          "package_name": "com.beautypro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGlZYBLWqaxfccp_DgF59NgqkmLrh3pOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/miShop"
+            android:icon="@drawable/outline_storefront_24"
+            android:title="Shop"/>
+
+        <item android:id="@+id/miCart"
+            android:icon="@drawable/outline_shopping_cart_24"
+            android:title="My Cart" />
+
+        <item android:id="@+id/miOrders"
+            android:icon="@drawable/outline_view_list_24"
+            android:title="My Orders" />
+    </group>
+</menu>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ShopFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            app:endIconDrawable="@drawable/outline_search_24"
+            app:endIconMode="custom"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toStartOf="@+id/btnCart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Search"
+                android:fontFamily="@font/nanumgothic_regular"
+                android:textSize="14sp"
+                android:imeOptions="actionSearch"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCategories"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:endIconMode="dropdown_menu"
+            app:layout_constraintEnd_toEndOf="@+id/btnProfile"
+            app:layout_constraintStart_toStartOf="@+id/tilSearch"
+            app:layout_constraintTop_toBottomOf="@+id/tilSearch">
+
+            <AutoCompleteTextView
+                android:id="@+id/menuCategories"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Filter by Category"
+                android:text="All"
+                android:fontFamily="@font/nanumgothic_regular"
+                android:textSize="14sp"
+                android:inputType="none"
+                android:padding="16dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOrders"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@android:color/transparent"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/overview_24px"
+            app:iconGravity="textEnd"
+            app:iconTint="?colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/tilSearch"
+            app:layout_constraintEnd_toStartOf="@+id/btnProfile"
+            app:layout_constraintTop_toTopOf="@+id/tilSearch" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCart"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/outline_shopping_cart_24"
+            app:iconGravity="textEnd"
+            app:iconTint="?colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/tilSearch"
+            app:layout_constraintEnd_toStartOf="@+id/btnOrders"
+            app:layout_constraintTop_toTopOf="@+id/tilSearch" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnProfile"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:layout_marginEnd="16dp"
+            app:cornerRadius="24dp"
+            app:icon="@drawable/outline_person_24"
+            app:iconGravity="textEnd"
+            app:layout_constraintBottom_toBottomOf="@+id/tilSearch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tilSearch" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvShop"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilCategories" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
